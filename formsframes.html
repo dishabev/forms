@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms&Frames</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        .form_detail {
+            width: 700px;
+            height: 370px;
+            background-color: #9fcdcd;
+            border-radius: 20px;
+            padding: 50px 0 30px 40px;
+            margin: 50px 50px 50px 150px;
+            background-image: url(images/moon_flag.png);
+            background-repeat: no-repeat;
+            background-position: 481px 156px;
+            background-size: 50%;
+        }
+
+        h2 {
+            padding: 15px 200px 15px 85px;
+            background-color: rgb(236, 95, 43);
+            color: #fff;
+            width: 290px;
+            position: relative;
+            right: 70px;
+            top: -30px;
+            font-size: larger;
+            letter-spacing: 1px;
+
+        }
+
+        input {
+            margin-top: -10px;
+            margin-left: 15px;
+            padding-left: 10px;
+            border: none;
+            border-bottom: 2px solid rgb(128, 126, 126);
+            background-color: rgb(168, 214, 207);
+            width: 370px;
+            height: 40px;
+            font-size: larger;
+            font-weight: 600;
+            opacity: .6;
+        }
+
+        label {
+            color: #548080;
+            padding: 15px 0 20px 15px;
+            display: flex;
+        }
+
+        .card {
+            margin-top: -35px;
+        }
+
+        .data {
+            display: inline-flex;
+            align-items: flex-end;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .data input {
+            width: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="form_detail">
+        <h2>
+            CREDIT CARD DETAILS
+        </h2>
+        <form action="" method="POST"></form>
+        <div class="card">
+            <label for="cname">Card Number</label>
+            <input type="text" name="cardName" id="cname" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="user">
+            <label for="uname">Name On Card</label>
+            <input type="text" name="userName" id="uname" placeholder="Name Surname">
+        </div>
+        <div class="data">
+            <div>
+                <label for="date">Expiry Date</label>
+                <input type="text" name="expDate" id="date" placeholder="02">
+            </div>
+            <div>
+                <input type="text" name="expYear" id="year" placeholder="2017"></div>
+            <div>
+                <label for="CVV">CVV / CVN</label>
+                <input type="password" name="cvvCvn" id="cvv" placeholder="***">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
