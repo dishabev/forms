@@ -1,0 +1,215 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    background-color: beige;
+    padding: 10px 30px 20px 30px;
+}
+
+/* Валидация имени */
+
+input {
+    height: 3vh;
+    width: 20vh;
+    border-radius: 5px;
+    border: 2px solid ;
+    border-color: grey;
+    opacity: .6;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+    color: green;
+    font-weight: bolder;
+    background: url(images/valid.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 160px 5px;
+}
+input:invalid:not(:placeholder-shown) {
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+    background: url(images/invalid.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 160px 3px;
+}   
+  
+#des_text {
+    height: 100px;
+    width: 400px;
+}
+
+/* чекбокс */
+
+#subscribe {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    font-size: 14pt;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#subscribe+label {
+    border: 1px solid;
+    border-color: rgb(0, 128, 0);
+    position: relative;
+    width: 50px;
+    height: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: inset 0 2px 3px rgb(0 0 0 / 20%);
+    transition: .2s;
+}
+
+#subscribe+label::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 16px;
+    border-radius: 5px;
+    background: rgb(0, 128, 0);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 33%);
+    transition: .2s;
+}
+
+#subscribe:checked+label {
+    border-color: #db3939;
+}
+
+#subscribe:checked+label::before {
+    left: 26px;
+    background-color: #db3939;
+}
+
+.flex {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender {
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* радиокнопки */
+
+[type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+[type="radio"]+span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px rgb(0, 128, 0);
+    margin-right: 15px;
+    transition: .2s ease-in-out all;
+}
+
+[type="radio"]:checked+span::before {
+    background: rgb(0, 128, 0);
+    box-shadow: 0 0 0 1px rgb(0, 128, 0);
+}
+
+/* кнопки  */
+
+button.sum1 {
+    border-radius: 50%;
+    background: #db1e1e;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+button.sum2 {
+    border-radius: 50%;
+    background: #2733d4;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+button.btn1 {
+    border-radius: 10px;
+    background: #2ac97f;
+    width: 100px;
+    height: 40px;
+        border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+button.btn1:hover {
+    background-color: #21632c;
+    transition-duration: .2s;
+   }
+
+button.btn2 {
+    border-radius: 10px;
+    background: #d83644;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+button.btn2:hover {
+    background-color: #970c0c;
+    transition-duration: .2s;
+   }
+
+button.btn3 {
+    border-radius: 10px;
+    background: #707070;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+button.btn3:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    }
+
+button.btn1,
+.btn2,
+.btn3,
+button.sum2,
+button.sum1 {
+    cursor: pointer;
+    margin-right: 10px;
+}
